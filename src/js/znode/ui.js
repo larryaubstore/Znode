@@ -1,6 +1,22 @@
+var Znode = Znode || {};
+Znode.Custom = Znode.Custom || {};
+
+Znode.Custom.Ui = function() {
+	var _loadGraph = function(data) {
+   		Znode.Custom.Ui.Graph.fromJSON(data);
+	};
+	var _graph = undefined;
+
+	return {
+		LoadGraph: _loadGraph,
+		Graph: _graph
+	};
+}();
+
 $(function(){
-  
-  var graph = new NodeGraph();
+ 
+  Znode.Custom.Ui.Graph = new NodeGraph();
+  var graph = Znode.Custom.Ui.Graph;
   
   // consider moving to NodeGraph
   $("#canvas").mouseup(function(e){

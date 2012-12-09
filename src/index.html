@@ -9,6 +9,13 @@
     <script type="text/javascript" src="js/libs/raphael.js"></script>
     <script type="text/javascript" src="js/znode/nodegraph.js"></script>
     <script type="text/javascript" src="js/znode/ui.js"></script>
+    <script type="text/javascript" src="js/custom/loader.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            Znode.Custom.Loader.LoadGraphIfExist();
+        });
+    </script>
+
   </head>
   <body>
     <div id="openWin">
